@@ -1,12 +1,14 @@
 package com.example.restapi.service;
 
 import com.example.restapi.dto.DosenDto;
+import com.example.restapi.dto.KampusDto;
 import com.example.restapi.dto.MahasiswaDosen;
 import com.example.restapi.dto.MahasiswaDto;
 import com.example.restapi.entity.MahasiswaEntity;
 import com.example.restapi.model.BaseResponse;
 import com.example.restapi.model.BaseResponseV2;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface MahasiswaService {
@@ -15,7 +17,7 @@ public interface MahasiswaService {
 
     MahasiswaEntity getMahasiswaByKelas(MahasiswaDto kelas);
 
-    List<MahasiswaDosen> getMahasiswaAndDosen();
+    BaseResponseV2  getMahasiswaAndDosen();
 
     BaseResponse<DosenDto> getAllDosen();
 

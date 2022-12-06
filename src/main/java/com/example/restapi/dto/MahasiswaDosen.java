@@ -5,13 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
-public class MahasiswaDosen {
 
-    private String nama;
+public interface MahasiswaDosen {
 
-    private String nama_dosen;
+     String getNama();
+
+     String getNamaDosen();
+
 }

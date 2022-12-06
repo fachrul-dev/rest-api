@@ -1,6 +1,7 @@
 package com.example.restapi.controller;
 
 import com.example.restapi.dto.DosenDto;
+import com.example.restapi.dto.KampusDto;
 import com.example.restapi.dto.MahasiswaDosen;
 import com.example.restapi.dto.MahasiswaDto;
 import com.example.restapi.entity.MahasiswaEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -54,7 +56,7 @@ public class MahasiswaController {
     }
 
     @GetMapping("/getMahasiswaAndDosen")
-    private List<MahasiswaDosen> getMahasiswaAndDoses(){
+    private BaseResponseV2 getMahasiswaAndDoses(){
         return service.getMahasiswaAndDosen();
     }
 
